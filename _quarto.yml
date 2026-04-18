@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   description: "Miku blögi"
@@ -15,6 +16,3 @@ format:
       - brand
     css: styles.css
 language: _estonian.yml
-
-
-
