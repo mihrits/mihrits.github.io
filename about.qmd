@@ -1,0 +1,19 @@
+---
+title: "Blogist"
+image: miku.jpg
+about:
+  template: jolla
+  # links:
+  #   - icon: bluesky
+  #     text: Bluesky
+  #     href: https://bsky.app/
+  #   - icon: linkedin
+  #     text: LinkedIn
+  #     href: https://linkedin.com
+  #   - icon: github
+  #     text: Github
+  #     href: https://github.com
+
+---
+
+See blogi sai alguse ideest teha õvedega üksteisele väljakutsed. Minu väljakutse 2026 aastaks on teha vähemalt 12 blogipostitust. Postitused tulevad põhiliselt teadusest, (astro)füüsikast ja matemaatikast. Hääd lugemist!

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Miku blögi</title>
+<link>https://your-website-url.example.com/</link>
+<atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
+<description>Miku blögi</description>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Sun, 19 Apr 2026 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Katke astrofüüsiku tööst</title>
+  <dc:creator>Moorits Mihkel Muru</dc:creator>
+  <link>https://your-website-url.example.com/posts/mitteisotroopne-tihedus/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Mõne kuu eest tuli mul töö juures ette üks huvitav probleem. Huvitav, sest see erineb mu tavalisest tööst ja mulle meeldis seda lahendada. Ja loodetavasti ka huvitav teistel selle kohta lugeda. Tagant järele saan öelda, et selle töö juures lahendamine võttis umbes ühe tööpäeva, aga selle lahtkirjutamine siia blogisse võttis tosina jagu õhtuid kahe kuu jooksul kolmes erinevas riigis. Eesmärk oli see teha lihtsasti loetavaks, et ka mu vanaema saaks midagi aru, aga ma ei ole nii kindel, et see mul õnnestus.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/NGC3344_hst1024.jpg" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Spiraalgalaktika NGC3344 läbi kosmoseteleskoobi silmade. Allikas: Hubble (ESA/NASA)</figcaption>
+</figure>
+</div>
+<p>Ma töötan galaktikatega – kosmilised objektid, mis koosnevad tähtedest, gaasist ja tumeainest<sup>1</sup>. Aga mitte päris galaktikatega, vaid arvuti poolt genereeritud galaktikatega. Nendel galaktikatel on see eelis, et me teame väga täpselt, missugune see galaktika on, palju paremini kui vaatlustest teada saab, aga nõrkuseks on see, et me ei saa täitsa kindlad olla, et need on samasugused nagu tõelised galaktikad. Siiski, on kindlaks tehtud, et need arvuti galaktikad on suures pildis päris galaktikatega väga sarnased.</p>
+<p>Tumeaine sarnaneb tavalise ainega, mis on igal pool meie ümber. Aga tumeaine tundub olevat lihtsam. Erinevalt tavalisest ainest, millel on ka elektrilised omadused, on tumeainel ainult mass ja seega on vastastikmõjus ainult gravitatsiooni vahendusel. See tähendab ka näiteks, et tumeaine ei neela ega kiirga valgust, sest see on elektriline protsess. Sellepärast ei ole tumeainet ka teleskoobiga näha, sest tumeaine ei hooli valgusest, aga meie ainult valgust näemegi. Kuid see, et tumeaine hoolib ainult gravitatsioonist, muudab selle arvutis modelleerimise kordades lihtsamaks.</p>
+<section id="probleemi-püstitus" class="level2">
+<h2 class="anchored" data-anchor-id="probleemi-püstitus">Probleemi püstitus</h2>
+<p>Ühel päeval küsiti minult “Kas Linnutee galaktika keskmes olev tumeaine on isotroopse jaotusega?” See tähendab, et kas aine jaotus on kerakujuline või midagi muud, näiteks lapik. Piljardikuulis on näiteks aine jaotus isotroopne ehk igas suunas samasugune, aga kurgi sees mitte, sest see on hoopis piklikuma kujuga.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/skeem_isotroopsus.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<p>Mul on arvutis galaktika. See tähendab, et on andmetega fail, mis loetleb selle galaktika osakesi ja nende asukohti. Neid osakesi on miljoneid (11 112 129). Muidugi päriselt on galaktikas aatomeid oluliselt rohkem, aga kõik need ei mahu arvutisse, seega üks osake esindab (väga-väga) suurt kogust massi.</p>
+<p>Seega meie keskne küsimus taandub küsimuseks, et kas osakesed on isotroopse jaotusega. Seda on vaja veel lihtsustada. Isotroopsus on alati mingi punkti suhtes. Meie jaoks on see punkt galaktika keskkoht. Lihtsamalt öeldes tähendab isotroopsus keskpunkti suhtes seda, et kui me asume seal keskpunktis ja vaatame ringi, siis kõik suunad näevad samasugused välja. Näiteks, kui me paneksime silmad kinni ja keerutasime ennast umbes täpselt 22 radiaani, siis oleks võimatu öelda, kas me vaatame nüüd samas suunas või mitte, sest kõik näeb samasugune välja. Ja mitteisotroopne siis vastupidi, et kui me vaatame erinevates suundades, siis saame öelda, et me näeme erinvaid asju. Küsime siis hoopis, et kui me oleme Linnutee galaktika keskmes ja vaatame ringi, siis kas on võimalik erinevaid suundi üksteisest eristada?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/M102_HubbleEbrahimian_960.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Ketasgalaktika M102 serviti. Allikas: Hubble (ESA/NASA), Ehsan Ebrahimian</figcaption>
+</figure>
+</div>
+<p>Erinevalt eelmisest galaktika pildist paistab siin galaktika lapik, sest me vaatame sellele otsa hoopis serviti (nagu siil soovitas). Paljud galaktikad on kettakujulise struktuuriga, kaasa arvatud meie Linnutee galaktika. Seega, kui me oleksime selle galaktika keskpunktis, siis ilmselt meie vaade erineks sõltuvalt sellest, kas me vaatame ketta suunas või risti kettaga ehk rohkem “galaktikast välja”. Näiteks, kui sa juhuslikult leiad ennast pilvitul ja ilma Kuuta öösel täiesti valgusreostuseta aasal ja heidad ennast murule ning imetled tähti, siis on taevas selgesti eristatav meie Linnutee galaktika ketas, sest seal suunas paistab rohkem tähti ja tolmu. Galaktikad on tolmused! Muidugi mitte nii tolmused kui kodus kapi taga, aga siiski.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/DamavandMilkyWayPanS_tafreshi.jpg" class="img-fluid figure-img"></p>
+<figcaption>Tähistaevas ja Linnutee galaktika ketas, Alborzi mäestik, Iraan. Autor: Babak Tafreshi</figcaption>
+</figure>
+</div>
+<p>Võime öelda, et gaasi, tolmu ja tähtede jaotus on mitteisotroopne. Aga meie küsimus oli tumeaine kohta. Tumeainet pildi pealt ei paista, sest ta ei hooli valgusest. Teadlased arvavad, et suures pildis on tumeaine galaktikate ümber isotroopne. Keskpunktis on see suurema tihedusega ja mida kaugemale me liigume, seda väiksemaks tihedus muutub, olenemata, kuhu suunas minna, peaasi et keskpunktist kaugemale. Tumeaine kookon on tegelikult galaktikast oluliselt suurem. Neid kookoneid kutsutakse halodeks ja tumeaine halo on tavaliselt galaktikast endast 10-30 korda suurem.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/skeem_tumeaine_halo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<p>Aga kuidas saab siis nii olla, et gaas ja tähed on silmnähtavalt mitteisotroopsed, aga tumeaine on ühtlane? Kui ma just mainisin, et teadlased usuvad, et suures pildis on tumeaine jaotus isotroopne, siis sõnapaar “suures pildis” oli selles lauses väga tähtis. Võib-olla samadel skaaladel nagu galaktika ise ehk siis tumeaine halo keskosa ei olegi isotroopne. Selle väljaselgitamine ongi selle väikese eksperimendi mõte.</p>
+<p>Kuidas mõõta osakeste isotroopsust? See ei ole nii ilmselge nagu galaktika enda puhul, sest “suures pildis” on tumeaine jaotus ikkagi üpriski isotroopne. Seega meil on vaja midagi paremat kui lihtsalt pealevaatamine. Vaja matemaatika appi võtta.</p>
+<p>Alustame eeldusest, et kui tumeaine jaotus ei ole ühtlane igas suunas, siis see vähemalt mingil määral kattub galaktika enda ebaühtlusega. Ehk kui me kontrollime isotroopsust, siis eristame kahte suunda: mööda galaktika ketast ja risti galaktika kettaga. See tundub hea eeldus, sest kui tumeaine jaotus halo keskel on mitteisotroopne, siis tõenäoliselt on see tekitatud galaktika poolt. Galaktika kettas olev gaas ja tähed tõmbavad seda gravitatsiooniga pannkooklikuks<sup>2</sup>. Sellegipoolest on tähtis meeles hoida, et see on üks meie mudeli eeldustest, mis ei pruugi ilmtingimata õige olla. Aga mul on selle osas hea tunne, seega jätkame praegu selle eeldusega.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/skeem_uuritavad_suunad.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Meil on olemas nüüd kaks suunda, mille vahel me üritame erinevusi leida. Lihtsustatult öeldes, üleval/all ja kõrvale. Järgmine küsimus on, et mis see erinevus olla võiks. Tumeaine korral palju valikuid ei ole, tal on ainult mass ja asukoht. Arvutame tiheduse! Tihedus on massi ja ruumala suhe ehk matemaatiliselt <img src="https://latex.codecogs.com/png.latex?%5Crho%20=%20%5Cfrac%7Bm%7D%7BV%7D">. Praktikas on tiheduse jaoks meil vaja määrata ruumala ja siis liita kokku kõigi osakeste massid, mis asuvad selle ruumala sees. Suunad on meil juba valitud, seega nüüd on vaja otsutada, missugused ruumalad sobivad neid suundasid esindama. Kuidas valida ruumala, mis tähistab “üleval/all” või “kõrvale” suunda?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/m81_colombari_1080c.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Spiraalgalaktika M81 mitte-päris-serviti, komposiitpilt kosmosest ja Hawaiilt. Allikas: Subaru Telescope, Hubble Space Telescope, Roberto Colombari &amp; Robert Gendler <sup>3</sup></figcaption>
+</figure>
+</div>
+</section>
+<section id="ruumalad" class="level2">
+<h2 class="anchored" data-anchor-id="ruumalad">Ruumalad</h2>
+<p>Kõigepealt on meil vaja teada, kuidas galaktika ketas ruumis asetseb, sest simulatsioon on suur, seal on palju galaktikaid ja põhimõtteliselt mitte ükski neist ei ole ilusti serviti meie vaateväljaga, vaid juhusliku nurga all nagu üleval oleval pildil. Ütleme, et ma olin tubli, arvutasin galaktikas olevate osakeste põhjal nende inertsitensori, siis selle omavektorid, mille abil ma leidsin pöördemaatriksi ja siis tegin koordinaatteisenduse, mille lõpptulemuseks ongi meil galaktika, mis on kenasti servapidi meie poole ja galatika ülesse suund ühtib joonise ülesse suunaga. See kuidas see kõik töötab ei ole praegu nii oluline. Tähtis on, et meil on nüüd kenasti ülesrivistatud galaktika, millega me saame tööd teha.</p>
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/skeem_ketas.png" class="img-fluid"></p>
+<p>Alustame kõrvale suunast. Kuna galaktikal on ketas, siis me saame määrata ketta tasandi. Ja ütleme, et kõik osakesed, mis on ketta tasandist kaugusel <img src="https://latex.codecogs.com/png.latex?h"> asuvad kettas. Tegelikult peaks panema külje peale ka mingi piiri ette, muidu meil on lõpmatult suur ketas. Ütleme, et ketas ulatub maksimaalselt kaugusele <img src="https://latex.codecogs.com/png.latex?r">. Nendel suurustel võiks olla mingid väärtused ka. Kasutame ühikut <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%7Bkpc%7D">, mis tegelikult on kiloparsek, aga meie jaoks võib vabalt olla kalaktika pakcuc. Seega saame võtta, et <img src="https://latex.codecogs.com/png.latex?h=0,%5C!5%5C,%5Cmathrm%7Bkpc%7D">, mis teebki galaktika paksuseks täpselt 1 kalaktika pakcuc. Ja kauguse piiriks paneme praegu näiteks <img src="https://latex.codecogs.com/png.latex?r=7%5C,%5Cmathrm%7Bkpc%7D">.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/skeem_koonused.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Nüüd üles/alla suunad. Galaktika kettatasandi me juba määrasime. Saame määrata ka selle tasandiga risti oleva sirge ehk matemaatikakeeli tasandi normaali. Nüüd teeme koonuse, mille tipp puudutab galaktika keskpunkti ja koonuse telg ühtib selle ilusa sirgega, mis me just määratlesime. Aga koonuse üheselt määramise jaoks on meil vaja veel ühte parameetrit. See võib olla näiteks tipunurk või kõrguse ja põhjaks oleva ringi raadiuse suhe. Pärast mitut sekundit mõtlemist valime me, et meie koonuse kõrguse ja põhja raadiuse suhe saab olema 1. Sellist koonust kutsutakse ka võrdkülgseks koonuseks ja selle tipunurk (nurk külje ja telje vahel) on 45 kraadi.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/skeem_mittekettas.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<p>Nüüd me saamegi arvutada tihedused ketta suunas ja üles/alla suunas ja neid omavahel võrrelda. Saame kaks arvu ja kui need ei ole võrdsed, siis järelikult erinevad suunad on erinevad ja tumeaine tihedus ei ole isotroopne. Muidugi vaevalt kaks arvu täiesti samad tulevad. Mis siis saab, kui tiheduste erinevus on 1 misiganes-tiheduse-ühikut? Aga siis kui see on 0,1 või 0,00001? Tuleks arvutada ka, et kui suure täpsusega me oleme suutnud need kaks arvu määrata ehk nende arvude määramatused. Aga teate mis? See on keeruline. Võimalusi selle tegemiseks on palju ja võib-olla ma kunagi kirjutan nendest (terve loengukursuse?), aga sel korral püüame mööda hiilida. Teeme hoopis nii, et kahe arvu asemel arvutame neid rohkem. Arvutame tiheduse sõltuvuse kaugusest ehk lisaks praegustele ruumala määratlustele lisame veel ka kauguse vahemikud, mitte ei kasuta ainult maksimaalset kaugust. Niimoodi me saame uurida, kuidas tihedus muutub, mida kaugemale me galaktika keskkohast läheme. Ja sealt pealt näeme, et kui need muutuvad suhtliselt ühtlaselt, siis on meie tihedused piisavalt kenast määratud, määramatus on väike. Kui need tiheduse väärtused muutuvad kaugusega ebaühtlaselt ehk vahepeal on suurem tihedus, siis väiksem, siis suurem, siis väiksem, siis suurem jne, siis selle hajuvuse põhjal saame ka juba hinnata nende väärtuste määramatust. Käib kah. Vast.</p>
+<p>Peame otsustama, missugused kaugused meid huvitavad. Alustame lähemast otsast. Kuna simulatsioon ei ole lõpmata täpne ja väikestel skaaladel tehakse lihtsustusi, mis ei ole väga füüsikalised, siis otsustame, et me ei alusta oma arvutusi päris galaktika keskpunktist, vaid näiteks kauguselt <img src="https://latex.codecogs.com/png.latex?0,%5C!5%5C,%20%5Cmathrm%7Bkpc%7D">. Ja kuna me teame, et halod suurtel skaaladel on ikkagi suhteliselt isotroopsed, siis teemegi oma analüüsi ainult väikestel skaaladel. Lõpetame näiteks umbes <img src="https://latex.codecogs.com/png.latex?5%5C,%5Cmathrm%7Bkpc%7D"> juures. Me tahame kasutada nii väikest sammu kui võimalik, et meil oleks rohkem infot, aga samas piisavalt suurt sammu, et me ei arvutaks tihedust ainult paari osakese pealt, vaid neid võiks olla ikka korralik peotäis, näiteks 10 000. Kauguse muutumise sammu saab pärast arvutuste käigus muuta.</p>
+<p>Tiheduse arvutamiseks tuleb arvutile selgeks teha, et kust ala seest ta osakesi kokku peaks liitma. See on üldjuhul lihtne. Meil on osakese asukoht olemas ja saame kontrollida näiteks, et selle kaugus kettatasandist oleks piisavalt väike ja kaugus keskpunktist sobiks sellesse vahemikku, mille tihedust me praegu arvutame. See ei ole keeruline. Palju põnevam on probleem ruumaladega. Seda me ei saa lihtsalt simulatsioonist.</p>
+<p>Alustame sel korral üles/alla suunast, sest see on lihtsam. Esiteks, kuna üles ja alla suunad on täpselt sama ruumalaga, siis arvutame ainult ühe ja kasutame matemaatilist trikki, kus me pärast korrutame selle kahega ja oleme hästi uhked enda üle<sup>4</sup>. Kuna me nüüd uurime tihedusi erinevates kauguste vahemikes ja me vaatame kauguseid keskpunkist, siis need ruumalad tulevad painutatud, nagu kera kihid. Aga meie koonus on sirge lõikega, vähemalt selle põhi. Võib-olla on mõni parem kujund, mida võiks kasutada? See oli retooriline küsimus, muidugi on. Me kasutame hoopis kera sektoreid! Need on nagu sektorid ringist, aga ruumikamad.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/skeem_sfaariline_sketor.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Kuna see on nii tavaline kujund, siis selle ruumala arvutamiseks on valem olemas ja me ei peagi ise integraale lahendama. Kera sektori ehk sfäärilise sektori ruumala on <img src="https://latex.codecogs.com/png.latex?V%20=%20%5Cfrac%7B2%5Cpi%7D%7B3%7Dr%5E3(1-%5Ccos%5Cvarphi)">, kus <img src="https://latex.codecogs.com/png.latex?r"> on kera raadius ja <img src="https://latex.codecogs.com/png.latex?%5Cvarphi"> on analoogse koonuse tipunurk, mis meil oli <img src="https://latex.codecogs.com/png.latex?45%5E%5Ccirc">. Seega saame lihtsustada.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Balign%7D%20V_%5Ctext%7B%C3%BCleval%7D(r)%20&amp;=%20%5Cfrac%7B2%5Cpi%7D%7B3%7Dr%5E3(1-%5Ccos%2045%5E%5Ccirc)%20%5C%5C%0A&amp;=%20%5Cfrac%7B2%5Cpi%7D%7B3%7Dr%5E3%5Cleft(1-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%5Cright)%20%5C%5C%0A&amp;=%20%5Cfrac%7B2%5Cpi%7D%7B3%7Dr%5E3%20%5C%20%5Cfrac%7B2-%5Csqrt%7B2%7D%7D%7B2%7D%20%5C%5C%0A&amp;=%20%5Cfrac%7B2-%5Csqrt%7B2%7D%7D%7B3%7D%5Cpi%20r%5E3.%0A%5Cend%7Balign%7D%0A"></p>
+<p>See on kogu sfäärilise sektori ruumala, aga kuna me tahame arvutada tihedusi ainult mingis kindlas kauguste vahemikus, siis peame veel natuke vaeva nägema. Kui me oleme otsustanud, mis vahemikud me valime (me veel praegu ei ole seda ära otsustanud), siis me saame endale terve nimekirja raadiuseid. Olgu need <img src="https://latex.codecogs.com/png.latex?R%20=%20%5C%7Br_1,%20r_2,%20%5Cldots,%20r_n%5C%7D"> ehk meil on <img src="https://latex.codecogs.com/png.latex?n"> erinevat raadiust. Kuna me veel ei tea, mitu raadiust me valime, siis kõige suurem raadius on tähistatud lihtsalt <img src="https://latex.codecogs.com/png.latex?n"> tähega. See <img src="https://latex.codecogs.com/png.latex?n"> võib analüüsi käigus muutuda, seega praegu seda määrama ei hakka. Aga igatahes on teada, et kui me uurime asju nende raadiuste vahel, siis on meil kokku <img src="https://latex.codecogs.com/png.latex?n-1"> vahemikku. Näiteks kolme raadiuse korral oleks uurimise all kaks erinevat vahemikku, <img src="https://latex.codecogs.com/png.latex?r_1"> kuni <img src="https://latex.codecogs.com/png.latex?r_2"> ja <img src="https://latex.codecogs.com/png.latex?r_2"> kuni <img src="https://latex.codecogs.com/png.latex?r_3">. Hoiame ka meeles, et me ei alusta oma arvutusi päris galaktika keskpunktist, seega on selle sektori tipp justkui ära lõigatud. Leiame üldistatud kujul ruumala <img src="https://latex.codecogs.com/png.latex?i">-ndas vahemikus. Selle jaoks peame arvutama ruumala <img src="https://latex.codecogs.com/png.latex?r_%7Bi+1%7D"> ja <img src="https://latex.codecogs.com/png.latex?r_i"> jaoks ning leidma nende vahe.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20V_%7B%5Ctext%7B%C3%BCleval%7D,i%7D%20=%20V_%5Ctext%7B%C3%BCleval%7D(r_%7Bi+1%7D)%20-%20V_%5Ctext%7B%C3%BCleval%7D(r_i)%20=%20%5Cfrac%7B2-%5Csqrt%7B2%7D%7D%7B3%7D%5Cpi%20(r_%7Bi+1%7D%5E3%20-%20r_%7Bi%7D%5E3).%20"></p>
+<p>Selle abil saamegi ruumala ja tiheduse arvutada. Peame lihtsalt samas ruumalas olevate osakeste massid kokku liitma (nii ülevalt kui ka alt poolt galaktikat) ja jagama kahekordse ruumala väärtusega, sest me arvutasime ruumala ainult ühel pool galaktikat.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20V_%7B%5Ctext%7B%C3%BCleval/all%7D,i%7D%20=%202%20V_%7B%5Ctext%7B%C3%BCleval%7D,i%7D%20=%20%5Cfrac%7B2%5Cpi%7D%7B3%7D%20(2-%5Csqrt%7B2%7D)%20(r_%7Bi+1%7D%5E3%20-%20r_%7Bi%7D%5E3).%20"></p>
+<p>Ja ongi esimene ruumala arvutatud. Šokolaad meile selle eest! 🍫</p>
+<p>Järgmiseks tuleb arvutada ruumala galaktika ketta suunal.</p>
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/skeem_sfaariline_segment.png" class="img-fluid"></p>
+<p>See oli esimene kord üle pika aja, kui mul oli põhjust võtta välja paber ja pliiats ning paberile integraale kirjutada. Alustame mõnedest ilmselgetest asjadest. See ruumala on jällegi sümmetriline ketta tasandi suhtes, seega arvutame ruumala ainult ühe poole jaoks ja korrutame pärast kahega. See tuleb meil hästi välja. Teiseks, tegemist on kettaga ehk lapik silinder. Seega muidugi kasutame integreerimiseks silindrilisi koordinaate. Ja me üritame arvutada ruumala, seega tegemist on kolmekordse integraaliga.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20V_%5Ctext%7Bketas%7D(r)%20=%20%5Cint%5Climits_0%5Eh%20%5Cint%5Climits_0%5E%7B2%5Cpi%7D%20%5Cint%5Climits_0%5E%7B%5Csqrt%7Br%5E2-z%5E2%7D%7D%20%5Crho%20%5C%20%20%5Cmathrm%7Bd%7D%5Crho%20%5C,%5Cmathrm%7Bd%7D%5Ctheta%20%5C,%20%5Cmathrm%7Bd%7Dz.%20"></p>
+<p>See näeb ju täitsa kena välja. Aga nüüd võiks päriselt ruumala ka kätte saada ehk meil on vaja neist integraalidest lahti saada. Ma arvan, et ma jätan sel korral selgitamata, kuidas see integraal tekkis ja kuidas seda lahendada. Aga kui keegi peaks küsima, siis ma teen selle kohta lühikese selgitava postituse. Kuid seniks, vastus tuleb selline.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20V_%5Ctext%7Bketas%7D(r)%20=%20%5Cpi%5Cleft(%20r%5E2h%20-%20%5Cfrac%7Bh%5E3%7D%7B3%7D%20%5Cright).%20"></p>
+<p>Pärast seda, kui ma selle ära lahendanud olin, leidsin ma, et selle kujundi nimi on sfääriline segment ja selle arvutamiseks on valem olemas. Ehk mul tegelikult ei olnudki vaja integraale lahendada. Ma lihtsalt olin nii vaimustatud mõttest, et saab jälle midagi paberi peal teha ja ei otsinud edasi. Aga see on ka muidugi õppetund sellest, et miks on kasulik kujundite nimesid teada. Interneti ütleb, et sfäärilise segmendi ruumala on</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20V_%5Ctext%7Bsf%C3%A4%C3%A4riline%20segment%7D%20=%20%5Cfrac%7B%5Cpi%7D%7B6%7Dh%20(3r_1%5E2%20+%203r_2%5E2%20+%20h%5E2),%20"></p>
+<p>kus <img src="https://latex.codecogs.com/png.latex?r_1"> on aluseks oleva ringi raadius, <img src="https://latex.codecogs.com/png.latex?r_2"> ülemise ringi raadius ja <img src="https://latex.codecogs.com/png.latex?h"> on segmendi kõrgus. Meie juhul on <img src="https://latex.codecogs.com/png.latex?r_1=r"> ja <img src="https://latex.codecogs.com/png.latex?r_2%20=%20%5Csqrt%7Br%5E2-h%5E2%7D"> ja <img src="https://latex.codecogs.com/png.latex?h=h">. Seega saame lihtsustada</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Balign%7D%0AV_%5Ctext%7Bsf%C3%A4%C3%A4riline%20segment%7D%20&amp;=%20%5Cfrac%7B%5Cpi%7D%7B6%7Dh%20(3r%5E2%20+%203(r%5E2-h%5E2)%20+%20h%5E2)%20%5C%5C%0A&amp;=%20%5Cfrac%7B%5Cpi%7D%7B6%7Dh%20(6r%5E2%20-%202h%5E2)%20=%20%5C%5C%0A&amp;=%20%5Cpi%20%5Cleft(%20r%5E2h%20-%20%5Cfrac%7Bh%5E3%7D%7B3%7D%20%5Cright).%0A%5Cend%7Balign%7D%0A"></p>
+<p>Täiesti juhuslikult on see sama, mis oli integraali tulemus. Või siis loodevasti mitte juhuslikult, vaid saatuse tahte. See on väga kasulik, kui saab oma arvutusi kontrollida. Tihtipeale see nii lihtsalt ei käia ja on vaja keerulisemaid meetodeid välja mõelda, et kontrollida, et arvutatud tulemus on mõistlik. Aga sel korral läks hästi. Üks asi veel. Meil on ju vaja ruumala kindlas kauguste vahemikus.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Balign%7D%0AV_%7B%5Ctext%7Bketas%7D,i%7D%20&amp;=%20V_%5Ctext%7Bketas%7D(r_%7Bi+1%7D)%20-%20V_%5Ctext%7Bketas%7D(r_i)%20%5C%5C%0A&amp;=%20%5Cpi%20%5Cleft(%20%5Cleft(%20r_%7Bi+1%7D%5E2h%20-%20%5Cfrac%7Bh%5E3%7D%7B3%7D%20%5Cright)%20-%20%5Cleft(%20r_%7Bi%7D%5E2h%20-%20%5Cfrac%7Bh%5E3%7D%7B3%7D%20%5Cright)%20%5Cright)%20%5C%5C%0A&amp;=%20%5Cpi%20h%20(r_%7Bi+1%7D%5E2%20-%20r_i%5E2).%0A%5Cend%7Balign%7D%0A"></p>
+<p>Ja kõigil on ilusti meeles, et see oli ruumala ainult ühel pool ketta tasandit, seega korrutame sellle kahega, et saada kogu kõrvale suuna ruumala.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AV_%7B%5Ctext%7Bk%C3%B5rvale%7D,i%7D%20=%202%20V_%7B%5Ctext%7Bketas%7D,i%7D%20=%202%20%5Cpi%20h%20(r_%7Bi+1%7D%5E2%20-%20r_i%5E2).%0A"></p>
+<p>Teeme vahekokkuvõtte. Meie eesmärk on jätkuvalt uurida, kas tumeaine jaotus galaktika keskmes on isotroopne. Selle jaoks otsustasime arvutada tihedused erinevates galaktika osades ja erinevatel kaugustel, et arvutada asja, mida kutsutakse tihedusprofiiliks. Selle jaoks me valisime välja ruumalad, mis esindavad galaktika ketast (joonisel sinine) ja kettast üleval/all pool olevat ala (joonisel roheline). Need alad on silmnähtavalt erinava suurusega. Sellepärast arvutamegi tihedused, mitte lihtsalt massid. Me arvutasime neile vastavad ruumala. Nüüd on vaja kuidagi öelda arvutile, missuguste osakeste massid ta peaks kokku liitma ja siis saamegi arvutada massi ja ruumala suhted ehk tihedused ning need joonisele panna.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/skeem_ruumalad.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+</section>
+<section id="tihedusprofiilid" class="level2">
+<h2 class="anchored" data-anchor-id="tihedusprofiilid">Tihedusprofiilid</h2>
+<p>Me liigume nüüd paberi ja pliiatsi juurest arvutisse. Meil on seal osakesed koordinaatidega. Me ennist juba tegime trikke, et koordinaatteisendusega liigutada galaktika keskkoht koordinaatidele <img src="https://latex.codecogs.com/png.latex?(0,0,0)"> ja keerasime galaktika ketta paralleelseks XY tasandiga. Sellisel juhul lähevad kettasse need osakesed, mille korral <img src="https://latex.codecogs.com/png.latex?z">-koordinaadi absoluutväärtus on väiksem kui meie valitud ketta kõrgus <img src="https://latex.codecogs.com/png.latex?h"> ehk <img src="https://latex.codecogs.com/png.latex?%7Cz%7C%20%5Cleq%20h">. Ja osake on meie poolt valitud koonusjas alas kui selle kaugus <img src="https://latex.codecogs.com/png.latex?z">-teljest on väiksem kui tema <img src="https://latex.codecogs.com/png.latex?z">-koordinaat ehk <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7Bx%5E2%20+%20y%5E2%7D%20%5Cleq%20z">. Mõlemal juhul peab kaugus keskpunktist jääma sobivasse vahemikku ehk <img src="https://latex.codecogs.com/png.latex?r_i%20%5Cleq%20%5Csqrt%7Bx%5E2%20+%20y%5E2%20+%20z%5E2%7D%20%5Clt%20r_%7Bi+1%7D">.</p>
+<p>Arvutame tihedusprofiilid!</p>
+<p>Teeme kõigepealt lihtsama testi ja ei jaga ruumala veel kaheks osaks, vaid arvutame tiheduse kogu keras sõltuvana kauguest. Massikeskmes on tihedus suurem, sest gravitatsioon tõmbab seda sinna kokku ja mida kaugemale me sellest liigume, sest madalamaks tihedus muutub. Galaktika peaks asuma massikeskmes. Tihedusprofiil võiks välja näha selline.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/skeem_tiheduprofiil.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Simulatsioonist tuli välja selline.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/joonis_tihedusprofiil_vale_keskkoht.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Terasem lugeja võib tähele panna, et siin on mingi kala (ingl.k. <em>bug</em> – toimetaja). Tiheduse maksimum peaks olema keskpunktis, aga jooniselt tundub, et tihedus hoopis püsib sama või isegi kasvab pisut, kui me keskpunkist kaugemale liigume ja hakkab kahanema alles <img src="https://latex.codecogs.com/png.latex?30%5C,%5Cmathrm%7Bkpc%7D"> juures. Me oleme teinud kas suure avastuse või väikese vea. Kui esimese korraga asjad välja ei tule, siis tasub võtta samm tagasi ja mõelda, kas eeldused peavad paika ja kui hästi me oma andmeid teame. Joonistame oma galaktika välja.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/joonis_linnutee_halo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Siin ma olen välja joonistanud 10% gaasiosakestest, mis simulatsioonis kuuluvad uuritava galaktika halosse ja panin keskkoha juurde risti ka. Siit on näha, et lisaks põhilisele galaktikale halo keskel on selles halos ka mitu satelliitgalaktikat, millest vähemalt üks on piisavalt massiivne, et mõjutada keskkoha arvutamist. See teine galaktika on selles simulatsioonis olev Suur Magalhãesi Pilv, mis on Linnutee galaktika kõige suurem kaaslane. Kahjuks seda põhjapoolkeralt ei ole näha, aga Miina vast Austraalias kohtas teda öösiti. Minu üks praegustest teadusprojektidest ongi just selle satelliitgalaktika uurimine selle sama simulatsiooni põhjal.</p>
+<p>Tagasi meie probleemi juurde. See keskkoht, mida me praegu kasutame, on leitud kogu selle halo põhjal ja tulemus ei päde. Meil on vaja midagi erudeeritumat. Leiame keskkoha iteratiivselt. See tähendab, et kõigepealt kasutame kogu halo, mille raadius on <img src="https://latex.codecogs.com/png.latex?R">, ja arvutame kõigi osakeste põhjal keskkoha. Seejärel vähendame raadiust poole võrra ja kasutame ainult osakesi, mis on praegusest keskkohast <img src="https://latex.codecogs.com/png.latex?0.5R"> kaugusel ja leiame uue keskkoha. Me kordame seda kuni kahe järjestikku arvutatud keskkoha väärtused erinevad üksteisest vähem kui mingi piirväärtus <img src="https://latex.codecogs.com/png.latex?%5Cdelta">, mis määrab keskkoha leidmise täpsuse. Vaatame, kuidas meil nüüd keskkoha leidmisega läks.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/joonis_linnutee.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Ja serviti ka.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/joonis_linnutee_serviti.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Palju parem! Need joonised olid tehtud kasutades gaasiosakesi, mis toovad hästi välja galaktikad, sest seal on gaasi konsentratsioon oluliselt suurem kui mujal. Aga vaatame korra otsa ka tumeainele ehk nendele osakestele, mille jaotust meil on plaanis uurida.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/joonis_linnutee_tumeaine_serviti.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>See ongi see jaotus, mille kohta meil on vaja öelda, kas see on isotroopne või mitte. Arvutame nüüd tihedusprofiili uuesti, sel korral paremini määratud keskkohaga.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/joonis_tihedusprofiil.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Hästi, see on palju sarnasem oodatule. Seega kõik meie (üks) test<del>id</del> töötas<del>id</del> ja saame edasi analüüsi juurde liikuda. Nüüd jagame ruumalad kaheks osaks ja kontrollime, kas need erinevad või mitte, mis oligi meie esialgne küsimus. Saame sellise joonise.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/joonis_tihedusprofiilid_isotroopsus.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Pidev joon näitab tihedust ketta suunal ehk eelneval skeemil sinine ala ja katkendjoon näitab tihedust kettast üleval ja all pool ehk eelneval skeemil roheline ala. Kui teraselt vaadata, siis need on selgelt erinevad ehk tiheduse jaotus on mitte-isotroopne ja meie hüpotees, et tumeaine tihedus on suurem ketta tasandis, pidas paika. Juhhuu! Mul on rohkem kui üks simuleeritud galaktika, mida uurida. Mul on neid rohkem kui ühe käe peal annab kokku lugeda! Teeme joonise kõigi kuue galaktikaga.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/joonis_tihedusprofiilid_isotroopsus_koik_galaktikad.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Iga galaktika sai oma värvi. Seega kui otsida kaks sama värvi joont, üks pidev, teine katkendlik, siis on näha, et pidev joon on alati kõrgemal ehk iga galaktika korral on tumeaine tihedus ketta tasandis suurem kui kettast üleval ja all. Mida oligi tarvis tõestada (M.O.T.T.) <sup>5</sup>. Panen siia juurde ka joonised, mis ma oma kolleegidele saatsin, kui ma seda analüüsi nende jaoks tegin.</p>
+<p><img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/profiles_dm.png" class="img-fluid"> <img src="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/profiles_dm_center.png" class="img-fluid"></p>
+<p>Blogi jaoks tehtud jooniseid ma silusin pisut, et need selgemad välja näeks ja teaduslikule joonisele panin veel ühe võrdlusprofiili, mida kutsutakse NFW profiiliks, aga muus osas peaaegu sama. Teksti šrift on ka erinev. 😉</p>
+<p>Kui see tundus palju, siis kogu sellest asjast aru saamine, ise nende probleemide lahendamine ja kirjutamine võiks olla bakalaureusekraadi vääriline. Kraadi saaks kätte küll, aga kõrgema hinde jaoks oleks vaja natuke veel pinguta või oleneb ka muidugi, kui hea kirjuta ja esineja olla.</p>
+<p>Kui sa tõesti lugemisega siia lõpuni jõudsid, siis võta see küpsis 🍪! Kui sa lihtsalt kerisid siia lõppu, siis võta omale tass sooja jooki ☕, tõmba tekk ümber, et oleks hea soe olla, ning keri tagasi sinna, kus pooleli jäi.</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Autori allmärkused</h2>
+
+<ol>
+<li id="fn1"><p>Meil on kolleegidega olnud arutelusid, et mis täpsemalt kvalifitseerub galaktikaks. Mõnikord on tähed ja gaas ja tolm, aga puudub tumeaine, mõnel teisel korral on gaas ja tolm ja tumeaine, aga pole ühtegi tähte. Kindlat vastust ei ole.↩︎</p></li>
+<li id="fn2"><p>Üks kosmoloogia teooria, mis kirjeldab galaktikate teket ja seda, miks asjad lapikud on, kutsutaksegi pannkoogi mudeliks ehk <em>pancake model</em>.↩︎</p></li>
+<li id="fn3"><p>See pilt on pandud kokku kahe erineva teleskoobi piltidest ja see paistab siit ilusti välja. Kui vaadata tähti, mis kaamera sensori oma erksa valgusega ülesäritavad, siis olenevalt teleskoobi sekundaarpeegli konstruktisioonist tuleb erinev difraktsioonipilt. Hubble’i difraktsioon on nelja haruga ja Subaru oma kaheksa haruga.↩︎</p></li>
+<li id="fn4"><p>Kui ma seda analüüsi kolleegide jaoks tegin, siis ma tegelikult tegin alguses selle vea, et arvutasin küll massid mõlemalt poolt galaktikad, aga ma unustasin ruumala kahega korrutada ja tihedused tulid valed. Aga keegi ei saa seda kunagi teada.↩︎</p></li>
+<li id="fn5"><p>Ma pole neid sõnu vist juba 15 aastat kuhugi kirjutanud.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>astrofüüsika</category>
+  <category>galaktikad</category>
+  <category>matemaatika</category>
+  <guid>https://your-website-url.example.com/posts/mitteisotroopne-tihedus/</guid>
+  <pubDate>Sun, 19 Apr 2026 22:00:00 GMT</pubDate>
+  <media:content url="https://your-website-url.example.com/posts/mitteisotroopne-tihedus/M102_HubbleEbrahimian_960.jpg" medium="image" type="image/jpeg"/>
+</item>
+</channel>
+</rss>

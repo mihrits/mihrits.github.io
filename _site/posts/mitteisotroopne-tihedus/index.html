@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Moorits Mihkel Muru">
+<meta name="dcterms.date" content="2026-04-20">
+
+<title>Katke astrofüüsiku tööst – Miku blögi</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-1527cf75e32493cb6cf8cd23d860bbb9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Miku blögi</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">Blogist</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Katke astrofüüsiku tööst</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">astrofüüsika</div>
+                <div class="quarto-category">galaktikad</div>
+                <div class="quarto-category">matemaatika</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autor</div>
+      <div class="quarto-title-meta-contents">
+               <p>Moorits Mihkel Muru </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Avaldatud</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 20, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>Mõne kuu eest tuli mul töö juures ette üks huvitav probleem. Huvitav, sest see erineb mu tavalisest tööst ja mulle meeldis seda lahendada. Ja loodetavasti ka huvitav teistel selle kohta lugeda. Tagant järele saan öelda, et selle töö juures lahendamine võttis umbes ühe tööpäeva, aga selle lahtkirjutamine siia blogisse võttis tosina jagu õhtuid kahe kuu jooksul kolmes erinevas riigis. Eesmärk oli see teha lihtsasti loetavaks, et ka mu vanaema saaks midagi aru, aga ma ei ole nii kindel, et see mul õnnestus.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="NGC3344_hst1024.jpg" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Spiraalgalaktika NGC3344 läbi kosmoseteleskoobi silmade. Allikas: Hubble (ESA/NASA)</figcaption>
+</figure>
+</div>
+<p>Ma töötan galaktikatega – kosmilised objektid, mis koosnevad tähtedest, gaasist ja tumeainest<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Aga mitte päris galaktikatega, vaid arvuti poolt genereeritud galaktikatega. Nendel galaktikatel on see eelis, et me teame väga täpselt, missugune see galaktika on, palju paremini kui vaatlustest teada saab, aga nõrkuseks on see, et me ei saa täitsa kindlad olla, et need on samasugused nagu tõelised galaktikad. Siiski, on kindlaks tehtud, et need arvuti galaktikad on suures pildis päris galaktikatega väga sarnased.</p>
+<p>Tumeaine sarnaneb tavalise ainega, mis on igal pool meie ümber. Aga tumeaine tundub olevat lihtsam. Erinevalt tavalisest ainest, millel on ka elektrilised omadused, on tumeainel ainult mass ja seega on vastastikmõjus ainult gravitatsiooni vahendusel. See tähendab ka näiteks, et tumeaine ei neela ega kiirga valgust, sest see on elektriline protsess. Sellepärast ei ole tumeainet ka teleskoobiga näha, sest tumeaine ei hooli valgusest, aga meie ainult valgust näemegi. Kuid see, et tumeaine hoolib ainult gravitatsioonist, muudab selle arvutis modelleerimise kordades lihtsamaks.</p>
+<section id="probleemi-püstitus" class="level2">
+<h2 class="anchored" data-anchor-id="probleemi-püstitus">Probleemi püstitus</h2>
+<p>Ühel päeval küsiti minult “Kas Linnutee galaktika keskmes olev tumeaine on isotroopse jaotusega?” See tähendab, et kas aine jaotus on kerakujuline või midagi muud, näiteks lapik. Piljardikuulis on näiteks aine jaotus isotroopne ehk igas suunas samasugune, aga kurgi sees mitte, sest see on hoopis piklikuma kujuga.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="skeem_isotroopsus.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<p>Mul on arvutis galaktika. See tähendab, et on andmetega fail, mis loetleb selle galaktika osakesi ja nende asukohti. Neid osakesi on miljoneid (11 112 129). Muidugi päriselt on galaktikas aatomeid oluliselt rohkem, aga kõik need ei mahu arvutisse, seega üks osake esindab (väga-väga) suurt kogust massi.</p>
+<p>Seega meie keskne küsimus taandub küsimuseks, et kas osakesed on isotroopse jaotusega. Seda on vaja veel lihtsustada. Isotroopsus on alati mingi punkti suhtes. Meie jaoks on see punkt galaktika keskkoht. Lihtsamalt öeldes tähendab isotroopsus keskpunkti suhtes seda, et kui me asume seal keskpunktis ja vaatame ringi, siis kõik suunad näevad samasugused välja. Näiteks, kui me paneksime silmad kinni ja keerutasime ennast umbes täpselt 22 radiaani, siis oleks võimatu öelda, kas me vaatame nüüd samas suunas või mitte, sest kõik näeb samasugune välja. Ja mitteisotroopne siis vastupidi, et kui me vaatame erinevates suundades, siis saame öelda, et me näeme erinvaid asju. Küsime siis hoopis, et kui me oleme Linnutee galaktika keskmes ja vaatame ringi, siis kas on võimalik erinevaid suundi üksteisest eristada?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="M102_HubbleEbrahimian_960.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Ketasgalaktika M102 serviti. Allikas: Hubble (ESA/NASA), Ehsan Ebrahimian</figcaption>
+</figure>
+</div>
+<p>Erinevalt eelmisest galaktika pildist paistab siin galaktika lapik, sest me vaatame sellele otsa hoopis serviti (nagu siil soovitas). Paljud galaktikad on kettakujulise struktuuriga, kaasa arvatud meie Linnutee galaktika. Seega, kui me oleksime selle galaktika keskpunktis, siis ilmselt meie vaade erineks sõltuvalt sellest, kas me vaatame ketta suunas või risti kettaga ehk rohkem “galaktikast välja”. Näiteks, kui sa juhuslikult leiad ennast pilvitul ja ilma Kuuta öösel täiesti valgusreostuseta aasal ja heidad ennast murule ning imetled tähti, siis on taevas selgesti eristatav meie Linnutee galaktika ketas, sest seal suunas paistab rohkem tähti ja tolmu. Galaktikad on tolmused! Muidugi mitte nii tolmused kui kodus kapi taga, aga siiski.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="DamavandMilkyWayPanS_tafreshi.jpg" class="img-fluid figure-img"></p>
+<figcaption>Tähistaevas ja Linnutee galaktika ketas, Alborzi mäestik, Iraan. Autor: Babak Tafreshi</figcaption>
+</figure>
+</div>
+<p>Võime öelda, et gaasi, tolmu ja tähtede jaotus on mitteisotroopne. Aga meie küsimus oli tumeaine kohta. Tumeainet pildi pealt ei paista, sest ta ei hooli valgusest. Teadlased arvavad, et suures pildis on tumeaine galaktikate ümber isotroopne. Keskpunktis on see suurema tihedusega ja mida kaugemale me liigume, seda väiksemaks tihedus muutub, olenemata, kuhu suunas minna, peaasi et keskpunktist kaugemale. Tumeaine kookon on tegelikult galaktikast oluliselt suurem. Neid kookoneid kutsutakse halodeks ja tumeaine halo on tavaliselt galaktikast endast 10-30 korda suurem.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="skeem_tumeaine_halo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<p>Aga kuidas saab siis nii olla, et gaas ja tähed on silmnähtavalt mitteisotroopsed, aga tumeaine on ühtlane? Kui ma just mainisin, et teadlased usuvad, et suures pildis on tumeaine jaotus isotroopne, siis sõnapaar “suures pildis” oli selles lauses väga tähtis. Võib-olla samadel skaaladel nagu galaktika ise ehk siis tumeaine halo keskosa ei olegi isotroopne. Selle väljaselgitamine ongi selle väikese eksperimendi mõte.</p>
+<p>Kuidas mõõta osakeste isotroopsust? See ei ole nii ilmselge nagu galaktika enda puhul, sest “suures pildis” on tumeaine jaotus ikkagi üpriski isotroopne. Seega meil on vaja midagi paremat kui lihtsalt pealevaatamine. Vaja matemaatika appi võtta.</p>
+<p>Alustame eeldusest, et kui tumeaine jaotus ei ole ühtlane igas suunas, siis see vähemalt mingil määral kattub galaktika enda ebaühtlusega. Ehk kui me kontrollime isotroopsust, siis eristame kahte suunda: mööda galaktika ketast ja risti galaktika kettaga. See tundub hea eeldus, sest kui tumeaine jaotus halo keskel on mitteisotroopne, siis tõenäoliselt on see tekitatud galaktika poolt. Galaktika kettas olev gaas ja tähed tõmbavad seda gravitatsiooniga pannkooklikuks<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Sellegipoolest on tähtis meeles hoida, et see on üks meie mudeli eeldustest, mis ei pruugi ilmtingimata õige olla. Aga mul on selle osas hea tunne, seega jätkame praegu selle eeldusega.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="skeem_uuritavad_suunad.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Meil on olemas nüüd kaks suunda, mille vahel me üritame erinevusi leida. Lihtsustatult öeldes, üleval/all ja kõrvale. Järgmine küsimus on, et mis see erinevus olla võiks. Tumeaine korral palju valikuid ei ole, tal on ainult mass ja asukoht. Arvutame tiheduse! Tihedus on massi ja ruumala suhe ehk matemaatiliselt <span class="math inline">\(\rho = \frac{m}{V}\)</span>. Praktikas on tiheduse jaoks meil vaja määrata ruumala ja siis liita kokku kõigi osakeste massid, mis asuvad selle ruumala sees. Suunad on meil juba valitud, seega nüüd on vaja otsutada, missugused ruumalad sobivad neid suundasid esindama. Kuidas valida ruumala, mis tähistab “üleval/all” või “kõrvale” suunda?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="m81_colombari_1080c.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Spiraalgalaktika M81 mitte-päris-serviti, komposiitpilt kosmosest ja Hawaiilt. Allikas: Subaru Telescope, Hubble Space Telescope, Roberto Colombari &amp; Robert Gendler <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></figcaption>
+</figure>
+</div>
+</section>
+<section id="ruumalad" class="level2">
+<h2 class="anchored" data-anchor-id="ruumalad">Ruumalad</h2>
+<p>Kõigepealt on meil vaja teada, kuidas galaktika ketas ruumis asetseb, sest simulatsioon on suur, seal on palju galaktikaid ja põhimõtteliselt mitte ükski neist ei ole ilusti serviti meie vaateväljaga, vaid juhusliku nurga all nagu üleval oleval pildil. Ütleme, et ma olin tubli, arvutasin galaktikas olevate osakeste põhjal nende inertsitensori, siis selle omavektorid, mille abil ma leidsin pöördemaatriksi ja siis tegin koordinaatteisenduse, mille lõpptulemuseks ongi meil galaktika, mis on kenasti servapidi meie poole ja galatika ülesse suund ühtib joonise ülesse suunaga. See kuidas see kõik töötab ei ole praegu nii oluline. Tähtis on, et meil on nüüd kenasti ülesrivistatud galaktika, millega me saame tööd teha.</p>
+<p><img src="skeem_ketas.png" class="img-fluid"></p>
+<p>Alustame kõrvale suunast. Kuna galaktikal on ketas, siis me saame määrata ketta tasandi. Ja ütleme, et kõik osakesed, mis on ketta tasandist kaugusel <span class="math inline">\(h\)</span> asuvad kettas. Tegelikult peaks panema külje peale ka mingi piiri ette, muidu meil on lõpmatult suur ketas. Ütleme, et ketas ulatub maksimaalselt kaugusele <span class="math inline">\(r\)</span>. Nendel suurustel võiks olla mingid väärtused ka. Kasutame ühikut <span class="math inline">\(\mathrm{kpc}\)</span>, mis tegelikult on kiloparsek, aga meie jaoks võib vabalt olla kalaktika pakcuc. Seega saame võtta, et <span class="math inline">\(h=0,\!5\,\mathrm{kpc}\)</span>, mis teebki galaktika paksuseks täpselt 1 kalaktika pakcuc. Ja kauguse piiriks paneme praegu näiteks <span class="math inline">\(r=7\,\mathrm{kpc}\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="skeem_koonused.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Nüüd üles/alla suunad. Galaktika kettatasandi me juba määrasime. Saame määrata ka selle tasandiga risti oleva sirge ehk matemaatikakeeli tasandi normaali. Nüüd teeme koonuse, mille tipp puudutab galaktika keskpunkti ja koonuse telg ühtib selle ilusa sirgega, mis me just määratlesime. Aga koonuse üheselt määramise jaoks on meil vaja veel ühte parameetrit. See võib olla näiteks tipunurk või kõrguse ja põhjaks oleva ringi raadiuse suhe. Pärast mitut sekundit mõtlemist valime me, et meie koonuse kõrguse ja põhja raadiuse suhe saab olema 1. Sellist koonust kutsutakse ka võrdkülgseks koonuseks ja selle tipunurk (nurk külje ja telje vahel) on 45 kraadi.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="skeem_mittekettas.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<p>Nüüd me saamegi arvutada tihedused ketta suunas ja üles/alla suunas ja neid omavahel võrrelda. Saame kaks arvu ja kui need ei ole võrdsed, siis järelikult erinevad suunad on erinevad ja tumeaine tihedus ei ole isotroopne. Muidugi vaevalt kaks arvu täiesti samad tulevad. Mis siis saab, kui tiheduste erinevus on 1 misiganes-tiheduse-ühikut? Aga siis kui see on 0,1 või 0,00001? Tuleks arvutada ka, et kui suure täpsusega me oleme suutnud need kaks arvu määrata ehk nende arvude määramatused. Aga teate mis? See on keeruline. Võimalusi selle tegemiseks on palju ja võib-olla ma kunagi kirjutan nendest (terve loengukursuse?), aga sel korral püüame mööda hiilida. Teeme hoopis nii, et kahe arvu asemel arvutame neid rohkem. Arvutame tiheduse sõltuvuse kaugusest ehk lisaks praegustele ruumala määratlustele lisame veel ka kauguse vahemikud, mitte ei kasuta ainult maksimaalset kaugust. Niimoodi me saame uurida, kuidas tihedus muutub, mida kaugemale me galaktika keskkohast läheme. Ja sealt pealt näeme, et kui need muutuvad suhtliselt ühtlaselt, siis on meie tihedused piisavalt kenast määratud, määramatus on väike. Kui need tiheduse väärtused muutuvad kaugusega ebaühtlaselt ehk vahepeal on suurem tihedus, siis väiksem, siis suurem, siis väiksem, siis suurem jne, siis selle hajuvuse põhjal saame ka juba hinnata nende väärtuste määramatust. Käib kah. Vast.</p>
+<p>Peame otsustama, missugused kaugused meid huvitavad. Alustame lähemast otsast. Kuna simulatsioon ei ole lõpmata täpne ja väikestel skaaladel tehakse lihtsustusi, mis ei ole väga füüsikalised, siis otsustame, et me ei alusta oma arvutusi päris galaktika keskpunktist, vaid näiteks kauguselt <span class="math inline">\(0,\!5\, \mathrm{kpc}\)</span>. Ja kuna me teame, et halod suurtel skaaladel on ikkagi suhteliselt isotroopsed, siis teemegi oma analüüsi ainult väikestel skaaladel. Lõpetame näiteks umbes <span class="math inline">\(5\,\mathrm{kpc}\)</span> juures. Me tahame kasutada nii väikest sammu kui võimalik, et meil oleks rohkem infot, aga samas piisavalt suurt sammu, et me ei arvutaks tihedust ainult paari osakese pealt, vaid neid võiks olla ikka korralik peotäis, näiteks 10 000. Kauguse muutumise sammu saab pärast arvutuste käigus muuta.</p>
+<p>Tiheduse arvutamiseks tuleb arvutile selgeks teha, et kust ala seest ta osakesi kokku peaks liitma. See on üldjuhul lihtne. Meil on osakese asukoht olemas ja saame kontrollida näiteks, et selle kaugus kettatasandist oleks piisavalt väike ja kaugus keskpunktist sobiks sellesse vahemikku, mille tihedust me praegu arvutame. See ei ole keeruline. Palju põnevam on probleem ruumaladega. Seda me ei saa lihtsalt simulatsioonist.</p>
+<p>Alustame sel korral üles/alla suunast, sest see on lihtsam. Esiteks, kuna üles ja alla suunad on täpselt sama ruumalaga, siis arvutame ainult ühe ja kasutame matemaatilist trikki, kus me pärast korrutame selle kahega ja oleme hästi uhked enda üle<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. Kuna me nüüd uurime tihedusi erinevates kauguste vahemikes ja me vaatame kauguseid keskpunkist, siis need ruumalad tulevad painutatud, nagu kera kihid. Aga meie koonus on sirge lõikega, vähemalt selle põhi. Võib-olla on mõni parem kujund, mida võiks kasutada? See oli retooriline küsimus, muidugi on. Me kasutame hoopis kera sektoreid! Need on nagu sektorid ringist, aga ruumikamad.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="skeem_sfaariline_sketor.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Kuna see on nii tavaline kujund, siis selle ruumala arvutamiseks on valem olemas ja me ei peagi ise integraale lahendama. Kera sektori ehk sfäärilise sektori ruumala on <span class="math inline">\(V = \frac{2\pi}{3}r^3(1-\cos\varphi)\)</span>, kus <span class="math inline">\(r\)</span> on kera raadius ja <span class="math inline">\(\varphi\)</span> on analoogse koonuse tipunurk, mis meil oli <span class="math inline">\(45^\circ\)</span>. Seega saame lihtsustada.</p>
+<p><span class="math display">\[
+\begin{align} V_\text{üleval}(r) &amp;= \frac{2\pi}{3}r^3(1-\cos 45^\circ) \\
+&amp;= \frac{2\pi}{3}r^3\left(1-\frac{\sqrt{2}}{2}\right) \\
+&amp;= \frac{2\pi}{3}r^3 \ \frac{2-\sqrt{2}}{2} \\
+&amp;= \frac{2-\sqrt{2}}{3}\pi r^3.
+\end{align}
+\]</span></p>
+<p>See on kogu sfäärilise sektori ruumala, aga kuna me tahame arvutada tihedusi ainult mingis kindlas kauguste vahemikus, siis peame veel natuke vaeva nägema. Kui me oleme otsustanud, mis vahemikud me valime (me veel praegu ei ole seda ära otsustanud), siis me saame endale terve nimekirja raadiuseid. Olgu need <span class="math inline">\(R = \{r_1, r_2, \ldots, r_n\}\)</span> ehk meil on <span class="math inline">\(n\)</span> erinevat raadiust. Kuna me veel ei tea, mitu raadiust me valime, siis kõige suurem raadius on tähistatud lihtsalt <span class="math inline">\(n\)</span> tähega. See <span class="math inline">\(n\)</span> võib analüüsi käigus muutuda, seega praegu seda määrama ei hakka. Aga igatahes on teada, et kui me uurime asju nende raadiuste vahel, siis on meil kokku <span class="math inline">\(n-1\)</span> vahemikku. Näiteks kolme raadiuse korral oleks uurimise all kaks erinevat vahemikku, <span class="math inline">\(r_1\)</span> kuni <span class="math inline">\(r_2\)</span> ja <span class="math inline">\(r_2\)</span> kuni <span class="math inline">\(r_3\)</span>. Hoiame ka meeles, et me ei alusta oma arvutusi päris galaktika keskpunktist, seega on selle sektori tipp justkui ära lõigatud. Leiame üldistatud kujul ruumala <span class="math inline">\(i\)</span>-ndas vahemikus. Selle jaoks peame arvutama ruumala <span class="math inline">\(r_{i+1}\)</span> ja <span class="math inline">\(r_i\)</span> jaoks ning leidma nende vahe.</p>
+<p><span class="math display">\[ V_{\text{üleval},i} = V_\text{üleval}(r_{i+1}) - V_\text{üleval}(r_i) = \frac{2-\sqrt{2}}{3}\pi (r_{i+1}^3 - r_{i}^3). \]</span></p>
+<p>Selle abil saamegi ruumala ja tiheduse arvutada. Peame lihtsalt samas ruumalas olevate osakeste massid kokku liitma (nii ülevalt kui ka alt poolt galaktikat) ja jagama kahekordse ruumala väärtusega, sest me arvutasime ruumala ainult ühel pool galaktikat.</p>
+<p><span class="math display">\[ V_{\text{üleval/all},i} = 2 V_{\text{üleval},i} = \frac{2\pi}{3} (2-\sqrt{2}) (r_{i+1}^3 - r_{i}^3). \]</span></p>
+<p>Ja ongi esimene ruumala arvutatud. Šokolaad meile selle eest! 🍫</p>
+<p>Järgmiseks tuleb arvutada ruumala galaktika ketta suunal.</p>
+<p><img src="skeem_sfaariline_segment.png" class="img-fluid"></p>
+<p>See oli esimene kord üle pika aja, kui mul oli põhjust võtta välja paber ja pliiats ning paberile integraale kirjutada. Alustame mõnedest ilmselgetest asjadest. See ruumala on jällegi sümmetriline ketta tasandi suhtes, seega arvutame ruumala ainult ühe poole jaoks ja korrutame pärast kahega. See tuleb meil hästi välja. Teiseks, tegemist on kettaga ehk lapik silinder. Seega muidugi kasutame integreerimiseks silindrilisi koordinaate. Ja me üritame arvutada ruumala, seega tegemist on kolmekordse integraaliga.</p>
+<p><span class="math display">\[ V_\text{ketas}(r) = \int\limits_0^h \int\limits_0^{2\pi} \int\limits_0^{\sqrt{r^2-z^2}} \rho \  \mathrm{d}\rho \,\mathrm{d}\theta \, \mathrm{d}z. \]</span></p>
+<p>See näeb ju täitsa kena välja. Aga nüüd võiks päriselt ruumala ka kätte saada ehk meil on vaja neist integraalidest lahti saada. Ma arvan, et ma jätan sel korral selgitamata, kuidas see integraal tekkis ja kuidas seda lahendada. Aga kui keegi peaks küsima, siis ma teen selle kohta lühikese selgitava postituse. Kuid seniks, vastus tuleb selline.</p>
+<p><span class="math display">\[ V_\text{ketas}(r) = \pi\left( r^2h - \frac{h^3}{3} \right). \]</span></p>
+<p>Pärast seda, kui ma selle ära lahendanud olin, leidsin ma, et selle kujundi nimi on sfääriline segment ja selle arvutamiseks on valem olemas. Ehk mul tegelikult ei olnudki vaja integraale lahendada. Ma lihtsalt olin nii vaimustatud mõttest, et saab jälle midagi paberi peal teha ja ei otsinud edasi. Aga see on ka muidugi õppetund sellest, et miks on kasulik kujundite nimesid teada. Interneti ütleb, et sfäärilise segmendi ruumala on</p>
+<p><span class="math display">\[ V_\text{sfääriline segment} = \frac{\pi}{6}h (3r_1^2 + 3r_2^2 + h^2), \]</span></p>
+<p>kus <span class="math inline">\(r_1\)</span> on aluseks oleva ringi raadius, <span class="math inline">\(r_2\)</span> ülemise ringi raadius ja <span class="math inline">\(h\)</span> on segmendi kõrgus. Meie juhul on <span class="math inline">\(r_1=r\)</span> ja <span class="math inline">\(r_2 = \sqrt{r^2-h^2}\)</span> ja <span class="math inline">\(h=h\)</span>. Seega saame lihtsustada</p>
+<p><span class="math display">\[
+\begin{align}
+V_\text{sfääriline segment} &amp;= \frac{\pi}{6}h (3r^2 + 3(r^2-h^2) + h^2) \\
+&amp;= \frac{\pi}{6}h (6r^2 - 2h^2) = \\
+&amp;= \pi \left( r^2h - \frac{h^3}{3} \right).
+\end{align}
+\]</span></p>
+<p>Täiesti juhuslikult on see sama, mis oli integraali tulemus. Või siis loodevasti mitte juhuslikult, vaid saatuse tahte. See on väga kasulik, kui saab oma arvutusi kontrollida. Tihtipeale see nii lihtsalt ei käia ja on vaja keerulisemaid meetodeid välja mõelda, et kontrollida, et arvutatud tulemus on mõistlik. Aga sel korral läks hästi. Üks asi veel. Meil on ju vaja ruumala kindlas kauguste vahemikus.</p>
+<p><span class="math display">\[
+\begin{align}
+V_{\text{ketas},i} &amp;= V_\text{ketas}(r_{i+1}) - V_\text{ketas}(r_i) \\
+&amp;= \pi \left( \left( r_{i+1}^2h - \frac{h^3}{3} \right) - \left( r_{i}^2h - \frac{h^3}{3} \right) \right) \\
+&amp;= \pi h (r_{i+1}^2 - r_i^2).
+\end{align}
+\]</span></p>
+<p>Ja kõigil on ilusti meeles, et see oli ruumala ainult ühel pool ketta tasandit, seega korrutame sellle kahega, et saada kogu kõrvale suuna ruumala.</p>
+<p><span class="math display">\[
+V_{\text{kõrvale},i} = 2 V_{\text{ketas},i} = 2 \pi h (r_{i+1}^2 - r_i^2).
+\]</span></p>
+<p>Teeme vahekokkuvõtte. Meie eesmärk on jätkuvalt uurida, kas tumeaine jaotus galaktika keskmes on isotroopne. Selle jaoks otsustasime arvutada tihedused erinevates galaktika osades ja erinevatel kaugustel, et arvutada asja, mida kutsutakse tihedusprofiiliks. Selle jaoks me valisime välja ruumalad, mis esindavad galaktika ketast (joonisel sinine) ja kettast üleval/all pool olevat ala (joonisel roheline). Need alad on silmnähtavalt erinava suurusega. Sellepärast arvutamegi tihedused, mitte lihtsalt massid. Me arvutasime neile vastavad ruumala. Nüüd on vaja kuidagi öelda arvutile, missuguste osakeste massid ta peaks kokku liitma ja siis saamegi arvutada massi ja ruumala suhted ehk tihedused ning need joonisele panna.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="skeem_ruumalad.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+</section>
+<section id="tihedusprofiilid" class="level2">
+<h2 class="anchored" data-anchor-id="tihedusprofiilid">Tihedusprofiilid</h2>
+<p>Me liigume nüüd paberi ja pliiatsi juurest arvutisse. Meil on seal osakesed koordinaatidega. Me ennist juba tegime trikke, et koordinaatteisendusega liigutada galaktika keskkoht koordinaatidele <span class="math inline">\((0,0,0)\)</span> ja keerasime galaktika ketta paralleelseks XY tasandiga. Sellisel juhul lähevad kettasse need osakesed, mille korral <span class="math inline">\(z\)</span>-koordinaadi absoluutväärtus on väiksem kui meie valitud ketta kõrgus <span class="math inline">\(h\)</span> ehk <span class="math inline">\(|z| \leq h\)</span>. Ja osake on meie poolt valitud koonusjas alas kui selle kaugus <span class="math inline">\(z\)</span>-teljest on väiksem kui tema <span class="math inline">\(z\)</span>-koordinaat ehk <span class="math inline">\(\sqrt{x^2 + y^2} \leq z\)</span>. Mõlemal juhul peab kaugus keskpunktist jääma sobivasse vahemikku ehk <span class="math inline">\(r_i \leq \sqrt{x^2 + y^2 + z^2} \lt r_{i+1}\)</span>.</p>
+<p>Arvutame tihedusprofiilid!</p>
+<p>Teeme kõigepealt lihtsama testi ja ei jaga ruumala veel kaheks osaks, vaid arvutame tiheduse kogu keras sõltuvana kauguest. Massikeskmes on tihedus suurem, sest gravitatsioon tõmbab seda sinna kokku ja mida kaugemale me sellest liigume, sest madalamaks tihedus muutub. Galaktika peaks asuma massikeskmes. Tihedusprofiil võiks välja näha selline.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="skeem_tiheduprofiil.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Simulatsioonist tuli välja selline.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="joonis_tihedusprofiil_vale_keskkoht.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Terasem lugeja võib tähele panna, et siin on mingi kala (ingl.k. <em>bug</em> – toimetaja). Tiheduse maksimum peaks olema keskpunktis, aga jooniselt tundub, et tihedus hoopis püsib sama või isegi kasvab pisut, kui me keskpunkist kaugemale liigume ja hakkab kahanema alles <span class="math inline">\(30\,\mathrm{kpc}\)</span> juures. Me oleme teinud kas suure avastuse või väikese vea. Kui esimese korraga asjad välja ei tule, siis tasub võtta samm tagasi ja mõelda, kas eeldused peavad paika ja kui hästi me oma andmeid teame. Joonistame oma galaktika välja.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="joonis_linnutee_halo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Siin ma olen välja joonistanud 10% gaasiosakestest, mis simulatsioonis kuuluvad uuritava galaktika halosse ja panin keskkoha juurde risti ka. Siit on näha, et lisaks põhilisele galaktikale halo keskel on selles halos ka mitu satelliitgalaktikat, millest vähemalt üks on piisavalt massiivne, et mõjutada keskkoha arvutamist. See teine galaktika on selles simulatsioonis olev Suur Magalhãesi Pilv, mis on Linnutee galaktika kõige suurem kaaslane. Kahjuks seda põhjapoolkeralt ei ole näha, aga Miina vast Austraalias kohtas teda öösiti. Minu üks praegustest teadusprojektidest ongi just selle satelliitgalaktika uurimine selle sama simulatsiooni põhjal.</p>
+<p>Tagasi meie probleemi juurde. See keskkoht, mida me praegu kasutame, on leitud kogu selle halo põhjal ja tulemus ei päde. Meil on vaja midagi erudeeritumat. Leiame keskkoha iteratiivselt. See tähendab, et kõigepealt kasutame kogu halo, mille raadius on <span class="math inline">\(R\)</span>, ja arvutame kõigi osakeste põhjal keskkoha. Seejärel vähendame raadiust poole võrra ja kasutame ainult osakesi, mis on praegusest keskkohast <span class="math inline">\(0.5R\)</span> kaugusel ja leiame uue keskkoha. Me kordame seda kuni kahe järjestikku arvutatud keskkoha väärtused erinevad üksteisest vähem kui mingi piirväärtus <span class="math inline">\(\delta\)</span>, mis määrab keskkoha leidmise täpsuse. Vaatame, kuidas meil nüüd keskkoha leidmisega läks.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="joonis_linnutee.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Ja serviti ka.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="joonis_linnutee_serviti.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Palju parem! Need joonised olid tehtud kasutades gaasiosakesi, mis toovad hästi välja galaktikad, sest seal on gaasi konsentratsioon oluliselt suurem kui mujal. Aga vaatame korra otsa ka tumeainele ehk nendele osakestele, mille jaotust meil on plaanis uurida.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="joonis_linnutee_tumeaine_serviti.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>See ongi see jaotus, mille kohta meil on vaja öelda, kas see on isotroopne või mitte. Arvutame nüüd tihedusprofiili uuesti, sel korral paremini määratud keskkohaga.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="joonis_tihedusprofiil.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Hästi, see on palju sarnasem oodatule. Seega kõik meie (üks) test<del>id</del> töötas<del>id</del> ja saame edasi analüüsi juurde liikuda. Nüüd jagame ruumalad kaheks osaks ja kontrollime, kas need erinevad või mitte, mis oligi meie esialgne küsimus. Saame sellise joonise.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="joonis_tihedusprofiilid_isotroopsus.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Pidev joon näitab tihedust ketta suunal ehk eelneval skeemil sinine ala ja katkendjoon näitab tihedust kettast üleval ja all pool ehk eelneval skeemil roheline ala. Kui teraselt vaadata, siis need on selgelt erinevad ehk tiheduse jaotus on mitte-isotroopne ja meie hüpotees, et tumeaine tihedus on suurem ketta tasandis, pidas paika. Juhhuu! Mul on rohkem kui üks simuleeritud galaktika, mida uurida. Mul on neid rohkem kui ühe käe peal annab kokku lugeda! Teeme joonise kõigi kuue galaktikaga.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="joonis_tihedusprofiilid_isotroopsus_koik_galaktikad.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Iga galaktika sai oma värvi. Seega kui otsida kaks sama värvi joont, üks pidev, teine katkendlik, siis on näha, et pidev joon on alati kõrgemal ehk iga galaktika korral on tumeaine tihedus ketta tasandis suurem kui kettast üleval ja all. Mida oligi tarvis tõestada (M.O.T.T.) <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. Panen siia juurde ka joonised, mis ma oma kolleegidele saatsin, kui ma seda analüüsi nende jaoks tegin.</p>
+<p><img src="profiles_dm.png" class="img-fluid"> <img src="profiles_dm_center.png" class="img-fluid"></p>
+<p>Blogi jaoks tehtud jooniseid ma silusin pisut, et need selgemad välja näeks ja teaduslikule joonisele panin veel ühe võrdlusprofiili, mida kutsutakse NFW profiiliks, aga muus osas peaaegu sama. Teksti šrift on ka erinev. 😉</p>
+<p>Kui see tundus palju, siis kogu sellest asjast aru saamine, ise nende probleemide lahendamine ja kirjutamine võiks olla bakalaureusekraadi vääriline. Kraadi saaks kätte küll, aga kõrgema hinde jaoks oleks vaja natuke veel pinguta või oleneb ka muidugi, kui hea kirjuta ja esineja olla.</p>
+<p>Kui sa tõesti lugemisega siia lõpuni jõudsid, siis võta see küpsis 🍪! Kui sa lihtsalt kerisid siia lõppu, siis võta omale tass sooja jooki ☕, tõmba tekk ümber, et oleks hea soe olla, ning keri tagasi sinna, kus pooleli jäi.</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Autori allmärkused</h2>
+
+<ol>
+<li id="fn1"><p>Meil on kolleegidega olnud arutelusid, et mis täpsemalt kvalifitseerub galaktikaks. Mõnikord on tähed ja gaas ja tolm, aga puudub tumeaine, mõnel teisel korral on gaas ja tolm ja tumeaine, aga pole ühtegi tähte. Kindlat vastust ei ole.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Üks kosmoloogia teooria, mis kirjeldab galaktikate teket ja seda, miks asjad lapikud on, kutsutaksegi pannkoogi mudeliks ehk <em>pancake model</em>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>See pilt on pandud kokku kahe erineva teleskoobi piltidest ja see paistab siit ilusti välja. Kui vaadata tähti, mis kaamera sensori oma erksa valgusega ülesäritavad, siis olenevalt teleskoobi sekundaarpeegli konstruktisioonist tuleb erinev difraktsioonipilt. Hubble’i difraktsioon on nelja haruga ja Subaru oma kaheksa haruga.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Kui ma seda analüüsi kolleegide jaoks tegin, siis ma tegelikult tegin alguses selle vea, et arvutasin küll massid mõlemalt poolt galaktikad, aga ma unustasin ruumala kahega korrutada ja tihedused tulid valed. Aga keegi ei saa seda kunagi teada.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Ma pole neid sõnu vist juba 15 aastat kuhugi kirjutanud.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/your-website-url\.example\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
