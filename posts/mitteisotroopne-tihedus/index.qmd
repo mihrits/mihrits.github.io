@@ -82,11 +82,12 @@ Alustame sel korral üles/alla suunast, sest see on lihtsam. Esiteks, kuna üles
 Kuna see on nii tavaline kujund, siis selle ruumala arvutamiseks on valem olemas ja me ei peagi ise integraale lahendama. Kera sektori ehk sfäärilise sektori ruumala on $V = \frac{2\pi}{3}r^3(1-\cos\varphi)$, kus $r$ on kera raadius ja $\varphi$ on analoogse koonuse tipunurk, mis meil oli $45^\circ$. Seega saame lihtsustada.
 
 $$
-\begin{align} V_\text{üleval}(r) &= \frac{2\pi}{3}r^3(1-\cos 45^\circ) \\
+\begin{align*}
+V_\text{üleval}(r) &= \frac{2\pi}{3}r^3(1-\cos 45^\circ) \\
 &= \frac{2\pi}{3}r^3\left(1-\frac{\sqrt{2}}{2}\right) \\
 &= \frac{2\pi}{3}r^3 \ \frac{2-\sqrt{2}}{2} \\
 &= \frac{2-\sqrt{2}}{3}\pi r^3.
-\end{align}
+\end{align*}
 $$
 
 See on kogu sfäärilise sektori ruumala, aga kuna me tahame arvutada tihedusi ainult mingis kindlas kauguste vahemikus, siis peame veel natuke vaeva nägema. Kui me oleme otsustanud, mis vahemikud me valime (me veel praegu ei ole seda ära otsustanud), siis me saame endale terve nimekirja raadiuseid. Olgu need $R = \{r_1, r_2, \ldots, r_n\}$ ehk meil on $n$ erinevat raadiust. Kuna me veel ei tea, mitu raadiust me valime, siis kõige suurem raadius on tähistatud lihtsalt $n$ tähega. See $n$ võib analüüsi käigus muutuda, seega praegu seda määrama ei hakka. Aga igatahes on teada, et kui me uurime asju nende raadiuste vahel, siis on meil kokku $n-1$ vahemikku. Näiteks kolme raadiuse korral oleks uurimise all kaks erinevat vahemikku, $r_1$ kuni $r_2$ ja $r_2$ kuni $r_3$. Hoiame ka meeles, et me ei alusta oma arvutusi päris galaktika keskpunktist, seega on selle sektori tipp justkui ära lõigatud. Leiame üldistatud kujul ruumala $i$-ndas vahemikus. Selle jaoks peame arvutama ruumala $r_{i+1}$ ja $r_i$ jaoks ning leidma nende vahe.
@@ -118,21 +119,21 @@ $$ V_\text{sfääriline segment} = \frac{\pi}{6}h (3r_1^2 + 3r_2^2 + h^2), $$
 kus $r_1$ on aluseks oleva ringi raadius, $r_2$ ülemise ringi raadius ja $h$ on segmendi kõrgus. Meie juhul on $r_1=r$ ja $r_2 = \sqrt{r^2-h^2}$ ja $h=h$. Seega saame lihtsustada
 
 $$
-\begin{align}
+\begin{align*}
  V_\text{sfääriline segment} &= \frac{\pi}{6}h (3r^2 + 3(r^2-h^2) + h^2) \\
  &= \frac{\pi}{6}h (6r^2 - 2h^2) = \\
  &= \pi \left( r^2h - \frac{h^3}{3} \right). 
- \end{align}
+ \end{align*}
  $$
 
 Täiesti juhuslikult on see sama, mis oli integraali tulemus. Või siis loodevasti mitte juhuslikult, vaid saatuse tahte. See on väga kasulik, kui saab oma arvutusi kontrollida. Tihtipeale see nii lihtsalt ei käia ja on vaja keerulisemaid meetodeid välja mõelda, et kontrollida, et arvutatud tulemus on mõistlik. Aga sel korral läks hästi. Üks asi veel. Meil on ju vaja ruumala kindlas kauguste vahemikus.
 
 $$
-\begin{align}
+\begin{align*}
 V_{\text{ketas},i} &= V_\text{ketas}(r_{i+1}) - V_\text{ketas}(r_i) \\
 &= \pi \left( \left( r_{i+1}^2h - \frac{h^3}{3} \right) - \left( r_{i}^2h - \frac{h^3}{3} \right) \right) \\
 &= \pi h (r_{i+1}^2 - r_i^2).
-\end{align}
+\end{align*}
 $$
 
 Ja kõigil on ilusti meeles, et see oli ruumala ainult ühel pool ketta tasandit, seega korrutame sellle kahega, et saada kogu kõrvale suuna ruumala.

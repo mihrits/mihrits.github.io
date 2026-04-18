@@ -15,4 +15,5 @@ format:
       - sketchy
       - brand
     css: styles.css
+    html-math-method: katex
 language: _estonian.yml
