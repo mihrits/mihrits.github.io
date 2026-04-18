@@ -1,7 +1,7 @@
 ---
 title: "Katke astrofüüsiku tööst"
 author: "Moorits Mihkel Muru"
-date: "2026-04-20"
+date: "2026-04-19"
 categories: [astrofüüsika, galaktikad, matemaatika]
 image: "M102_HubbleEbrahimian_960.jpg"
 ---
