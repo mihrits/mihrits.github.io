@@ -16,4 +16,5 @@ format:
       - brand
     css: styles.css
     html-math-method: katex
+    date-format: "D.M.YYYY"
 language: _estonian.yml
